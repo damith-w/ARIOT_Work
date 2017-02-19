@@ -1,0 +1,25 @@
+import bluetooth
+
+target_name = "Windows Phone"
+file_to_send = "/home/damith/Desktop/FYP/BluetoothConnectivity/test1.png"
+
+target_address = None
+obex_port = None
+
+print "Searching Nearby Devices..."
+nearby_devices = bluetooth.discover_devices() 
+
+for i in nearby_devices:
+	#print i + " --> " + bluetooth.lookup_name( i ) 
+	if target_name == bluetooth.lookup_name( i ): 
+		print "Device Found ..... "
+		target_address = i
+		break
+
+
+
+def main():
+	pass
+
+if __name__ == '__main__':
+	main()

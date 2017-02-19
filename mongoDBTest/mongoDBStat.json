@@ -1,0 +1,6 @@
+{
+  "host": "localhost",
+  "port": "27017",
+  "database": "testDatabase001",
+  "collection": "testCollection001"
+}
